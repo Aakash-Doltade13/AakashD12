@@ -1,4 +1,4 @@
-package OopsTasks;
+package AakashD12.OopsAssignment;
 
 public class Rectangle
 {

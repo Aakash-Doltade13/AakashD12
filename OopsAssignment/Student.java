@@ -1,36 +1,17 @@
-package OopsTasks;
+package AakashD12.OopsAssignment;
 
 import java.util.Scanner;
 
 class Student
 {
      String name;
-     int mark1,mark2,mark3;
+     int subject1,subject2,subject3;
      int rollno;
      int totalmarks,stdtotalmarks;
 
-    void setStudDetails()
-    {
-        Scanner sc =new Scanner(System.in);
-
-        System.out.println("Enter Student Name");
-        String name =sc.next();
-
-        System.out.println("Enter Student ID");
-        int rollno =sc.nextInt();
-
-        System.out.println("Enter marks1");
-        int mark1 =sc.nextInt();
-
-        System.out.println("Enter marks2");
-        int mark2 =sc.nextInt();
-
-        System.out.println("Enter marks3");
-        int mark3 =sc.nextInt();
-    }
     int calculateTotal()
     {
-    stdtotalmarks =  mark1 + mark2+ mark3;
+    stdtotalmarks =  subject1 + subject2+ subject3;
     return  stdtotalmarks;
 
     }
@@ -38,9 +19,9 @@ class Student
     {
         System.out.println("Student Name : " +name);
         System.out.println("Student Roll Num : " +rollno);
-        System.out.println("Marks in Marathi : " +mark1);
-        System.out.println("Marks in English : " +mark2);
-        System.out.println("Marks in Hindi : " +mark3);
+        System.out.println("Marks in Marathi : " +subject1);
+        System.out.println("Marks in English : " +subject2);
+        System.out.println("Marks in Hindi : " +subject3);
         System.out.println("Total Marks : " +stdtotalmarks);
     }
    public class StudentDemo
@@ -48,8 +29,23 @@ class Student
         public static void main(String[] args)
         {
             Student std =new Student();
+            Scanner sc =new Scanner(System.in);
 
-            std.setStudDetails();
+            System.out.println("Enter Student Name");
+            String name =sc.next();
+
+            System.out.println("Enter Student ID");
+            int rollno =sc.nextInt();
+
+            System.out.println("Enter subjects1");
+            int subject1 =sc.nextInt();
+
+            System.out.println("Enter subjects2");
+            int subject2 =sc.nextInt();
+
+            System.out.println("Enter subjects3");
+            int subject3 =sc.nextInt();
+
             std.calculateTotal();
             std.displayStudDetails();
 
