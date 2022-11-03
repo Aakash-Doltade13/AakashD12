@@ -1,4 +1,4 @@
-package AakashD12.OopsAssignment.Account;
+package AakashD12.OopsAssignment.AccountChanges;
 
 public class BankAccount 
 {
@@ -8,9 +8,9 @@ public class BankAccount
 	    
 	    BankAccount(int accNo, float accBalance, String accType) 
 	    {
-	        this.accountNo = accNo;
-	        this.accountBalance = accBalance;
-	        this.accountType = accType;
+	        accountNo = accNo;
+	        accountBalance = accBalance;
+	        accountType = accType;
 	    }
 
 	    public void setAccountNo(int accountNo) {

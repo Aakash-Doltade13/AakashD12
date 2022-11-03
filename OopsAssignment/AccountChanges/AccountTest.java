@@ -1,16 +1,16 @@
-package AakashD12.OopsAssignment.Account;
+package AakashD12.OopsAssignment.AccountChanges;
 import java.util.Scanner;
 
 public class AccountTest 
 {
 	    public static void main(String[] args) 
 	    {
-	        int count,counter=0,choose;
+	        int choose,counter=0,select;
 	        int accountNo, accountBalance;
 	        String accountType=null;
 	        
 	        Scanner sc = new Scanner(System.in);
-	        
+
 	        System.out.println("Enter your Details below :- ");
 	        System.out.println("Enter Account Number:");
 	        accountNo = sc.nextInt();
@@ -18,9 +18,9 @@ public class AccountTest
 	        System.out.println("Select Account Type:");
 	        System.out.println("Press 1 for Saving Account");
 	        System.out.println("Press 2 for Current Account");
-	        choose = sc.nextInt();
+	        select = sc.nextInt();
 
-	        switch  (choose) 
+	        switch  (select) 
 	        {
 	            case 1:
 	                accountType ="Saving Account";
@@ -34,7 +34,7 @@ public class AccountTest
 	        System.out.println("Enter Account balance:");
 	        accountBalance = sc.nextInt();
 
-	        BankAccount Bankacc = new BankAccount(accountNo,accountBalance,accountType);
+	        BankAccount Bankaccount = new BankAccount(accountNo,accountBalance,accountType);
 
 	        while (counter==0) 
 	        {
@@ -44,22 +44,22 @@ public class AccountTest
 	            System.out.println("Press 3 for Display Account Details ");
 	            System.out.println("Press 4 for Check Your Account Balance ");
 	            System.out.println("Press 5 for exit");
-	            count = sc.nextInt();
-	            switch (count) 
+	            choose = sc.nextInt();
+	            switch (choose)
 	            {
 	                case 1:
 	                    System.out.println("Enter amount to be deposit");
-	                    Bankacc.deposit(sc.nextInt());
+	                    Bankaccount.deposit(sc.nextInt());
 	                    break;
 	                case 2:
 	                    System.out.println("Enter amount to be withdraw");
-	                    Bankacc.withdraw(sc.nextInt());
+	                    Bankaccount.withdraw(sc.nextInt());
 	                    break;
 	                case 3:
-	                    System.out.println(Bankacc.displayAccountDetails());
+	                    System.out.println(Bankaccount.displayAccountDetails());
 	                    break;
 	                case 4:
-	                    System.out.println("Your Account Balance is :"+Bankacc.getAccountBalance());
+	                    System.out.println("Your Account Balance is :"+ Bankaccount.getAccountBalance());
 	                    break;
 	                case 5:
 	                    counter++;
